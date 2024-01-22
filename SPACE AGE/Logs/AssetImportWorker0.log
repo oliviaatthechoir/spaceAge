@@ -259,3 +259,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2245.720450 seconds.
+  path: Assets/Shaders/NewUnlitShader.shader
+  artifactKey: Guid(a2bcb562d836d4c71aac8c5e629e66e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/NewUnlitShader.shader using Guid(a2bcb562d836d4c71aac8c5e629e66e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d20ed46999843163d0a658c2a69894') in 0.015987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 137.154767 seconds.
+  path: Assets/Shaders/NewUnlitShader.shader
+  artifactKey: Guid(a2bcb562d836d4c71aac8c5e629e66e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/NewUnlitShader.shader using Guid(a2bcb562d836d4c71aac8c5e629e66e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b82d7fc5f0fe1e940712605199d49458') in 0.000834 seconds 
