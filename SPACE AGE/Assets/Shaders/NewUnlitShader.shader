@@ -1,54 +1,38 @@
-Shader "Unlit/WorldSpaceNormals"
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/SingleColor"
 {
     Properties
     {
-        _MainTex("Texture", 2D) = "orange" {}
+        // Color property for material inspector, default to white
+        _Color ("Main Color", Color) = (1,1,1,1)
     }
-
     SubShader
     {
-        Tags{"RenderType" = "Opaque" }
-        LOD 100
-
         Pass
         {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile_fog
-
-            #include "UnityCG.cginc"
-
-            struct appdata {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0; 
-            };
-
-            struct v2f {
-                float2 uv : TEXCOORD0;
-                UNITY_FOG_COORDS(1)
-                float4 vertex : SV_POSITION; 
-            };
-
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-
-            v2f vert (appdata v) {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o, o.vertex);
-                return o; 
+            
+            // vertex shader
+            // this time instead of using "appdata" struct, just spell inputs manually,
+            // and instead of returning v2f struct, also just return a single output
+            // float4 clip position
+            float4 vert (float4 vertex : POSITION) : SV_POSITION
+            {
+                return UnityObjectToClipPos(vertex);
             }
+            
+            // color from the material
+            fixed4 _Color;
 
-            fixed4 frag (v2f i) : SV_Target {
-                fixed4 col = tex2D(_MainTex, i.uv);
-                UNITY_APPLY_FOG(i.fogCoord, col);
-                return col; 
+            // pixel shader, no inputs needed
+            fixed4 frag () : SV_Target
+            {
+                return _Color; // just return it
             }
-
-             ENDCG   
-        } 
-
+            ENDCG
+        }
     }
 }
