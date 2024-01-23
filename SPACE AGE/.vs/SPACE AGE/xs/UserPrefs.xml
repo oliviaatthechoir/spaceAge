@@ -3,10 +3,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FauxGravityBody.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GravityCtrl.cs">
     <Files>
       <File FileName="Assets/Shaders/NewUnlitShader.shader" Line="36" Column="10" />
-      <File FileName="Assets/Scripts/FauxGravityBody.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GravityCtrl.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,5 +20,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="52123159-ad5e-4793-9b1d-c00198e284fb" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
